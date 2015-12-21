@@ -7,14 +7,38 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv-webcam-demo", "openc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffdexMe", "AffdexMe\AffdexMe.csproj", "{5B893EA1-EB11-425A-BF8A-05822F5E2C9A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "video-demo", "video-demo\video-demo.vcxproj", "{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DCDC209-C25D-4C61-B2AC-2FBA1775DD6B}.Debug|Mixed Platforms.ActiveCfg = Release|Win32
+		{8DCDC209-C25D-4C61-B2AC-2FBA1775DD6B}.Debug|Mixed Platforms.Build.0 = Release|Win32
+		{8DCDC209-C25D-4C61-B2AC-2FBA1775DD6B}.Debug|Win32.ActiveCfg = Release|Win32
+		{8DCDC209-C25D-4C61-B2AC-2FBA1775DD6B}.Debug|Win32.Build.0 = Release|Win32
+		{8DCDC209-C25D-4C61-B2AC-2FBA1775DD6B}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{8DCDC209-C25D-4C61-B2AC-2FBA1775DD6B}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{8DCDC209-C25D-4C61-B2AC-2FBA1775DD6B}.Release|Win32.ActiveCfg = Release|Win32
 		{8DCDC209-C25D-4C61-B2AC-2FBA1775DD6B}.Release|Win32.Build.0 = Release|Win32
+		{5B893EA1-EB11-425A-BF8A-05822F5E2C9A}.Debug|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5B893EA1-EB11-425A-BF8A-05822F5E2C9A}.Debug|Mixed Platforms.Build.0 = Release|Any CPU
+		{5B893EA1-EB11-425A-BF8A-05822F5E2C9A}.Debug|Win32.ActiveCfg = Release|Any CPU
+		{5B893EA1-EB11-425A-BF8A-05822F5E2C9A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5B893EA1-EB11-425A-BF8A-05822F5E2C9A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5B893EA1-EB11-425A-BF8A-05822F5E2C9A}.Release|Win32.ActiveCfg = Release|Any CPU
+		{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}.Debug|Mixed Platforms.ActiveCfg = Release|Win32
+		{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}.Debug|Mixed Platforms.Build.0 = Release|Win32
+		{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}.Debug|Win32.ActiveCfg = Release|Win32
+		{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}.Debug|Win32.Build.0 = Release|Win32
+		{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}.Release|Win32.ActiveCfg = Release|Win32
+		{5D5E4401-09DE-40D3-9E29-AFC4F2EF2C80}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
