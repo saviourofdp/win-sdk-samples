@@ -1,26 +1,38 @@
 #Sample Apps for Affdex SDK for Windows 
 
-Welcome to our repository on GitHub! Here you will find example code to get you started with our Affdex SDK 2.0 for Windows and begin emotion-enabling you own app!  Documentation for the Windows SDK is at <a href=http://developer.affectiva.com/windows/>Affectiva's Developer Portal</a>.
+Welcome to our repository on GitHub! Here you will find example code to get you started with our Affdex SDK 2.1 for Windows and begin emotion-enabling you own app!  Documentation for the Windows SDK is at <a href=http://developer.affectiva.com/windows/>Affectiva's Developer Portal</a>.
 
-OpenCV-webcam-demo
-------------------
+Dependencies
+------------
 
-*Dependencies*
-
-- Affdex SDK 2.0 (32 bit)
-- OpenCV for Windows 2.4.9: http://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.9/
+- Affdex SDK 2.1 (32 bit)
 - Visual Studio 2013 or higher
+
+
+*Additional dependencies for the C++ projects*
+
+- OpenCV for Windows
+- Boost 1.59
+
+Installation
+------------
+- Contact Affectiva at sales@affectiva.com to obtain the SDK.
+- Install the SDK using MSI installer.
+- The additional dependencies get installed automatically by NuGet.
+
+
+OpenCV-webcam-demo (C++)
+------------------
 
 OpenCV-webcam-demo is a simple app that uses the camera connected to your PC to view your facial expressions and face points.
 
-In order to use the project, you will need to:
-- Contact Affectiva at sales@affectiva.com to obtain the SDK.
-- Install the SDK using MSI installer.
-- Download OpenCV package and extract it into ${SRC_ROOT}\opencv
-- Use affdex-win-samples.sln to build the sample app
 
+Video-demo (c++)
+----------
 
-AffdexMe
+Video-demo is a simple app that can decode a video file using the SDK VideoDetector and display the emotion metrics and export the results in a csv file.
+
+AffdexMe (c#)
 --------
 
 **AffdexMe** is a windows application that demonstrates the use of the Affdex SDK for Windows. It uses the camera on your Windows PC to view, process and analyze live video of your face. Start the app and you will see your own face on the screen, and metrics describing your expressions.
