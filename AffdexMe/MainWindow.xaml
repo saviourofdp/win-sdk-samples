@@ -4,10 +4,12 @@
         Title="AffdexMe" 
         Height="640" Width="480"
         MinHeight="640" MinWidth="480"
-        MaxHeight="640" MaxWidth="480"
-        ResizeMode="NoResize"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
         Loaded="Window_Loaded"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        Keyboard.KeyUp="Window_KeyUp">
 
 
     <Window.Resources>
@@ -128,10 +130,10 @@
             <StackPanel Name="stackPanelImage" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
 
                 <Grid Name="gridAffdexFaceDisplay" VerticalAlignment="Stretch" Width="auto" Height="560" >
-                    <Image Name="imgAffdexFaceDisplay" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
+                    <Image Name="imgAffdexFaceDisplay" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Stretch" Stretch="Uniform" />
                     
                     <Image Name="imgAffdexLogoDisplay" Margin="40" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                            Height="auto" Source="AffectivaLogo1.png" Visibility="Visible"/>
+                            Height="auto"  Source="Resources\AffectivaLogo1.png" Visibility="Visible"/>
 
                     <Canvas Name="canvasFacePoints" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     <TextBlock Name="interocularDistanceDisplay" Visibility="Hidden" Text="Interocular Distance: " FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" Margin="10,131,0,413"/>
@@ -228,15 +230,15 @@
 
                     <Image Name="imgAffdexLogoBackground" Width="auto" Grid.Column="1" Grid.Row="1"
                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                            Height="auto" Source="AffectivaLogo1.png" Margin="0,0,0,-34" Grid.RowSpan="2"/>
+                            Height="auto" Source="Resources\AffectivaLogo1.png" Margin="0,0,0,-34" Grid.RowSpan="2"/>
                 </Grid>
             </StackPanel>
         </Grid>
 
         <DockPanel VerticalAlignment="Bottom" Background="Coral" >
 
-            <Grid HorizontalAlignment="Center">
-                <GroupBox Margin="0,5,0,0"  Height="40" VerticalAlignment="Stretch" BorderBrush="Transparent" BorderThickness="0">
+            <Grid x:Name="controlGrid"  HorizontalAlignment="Center">
+                <GroupBox Margin="0,5,0,0"  Height="40" VerticalAlignment="Stretch" BorderBrush="Transparent" Visibility="Collapsed" BorderThickness="0">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Button Name="btnStartCamera" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Center" Margin="0,0,5,0" VerticalAlignment="Top" Width="40" Content="Start" />
                         <Button Name="btnResetCamera" Style="{StaticResource CustomButtonStyle}" HorizontalAlignment="Center" Margin="0,0,5,0" VerticalAlignment="Top" Width="40" Content="Reset" />

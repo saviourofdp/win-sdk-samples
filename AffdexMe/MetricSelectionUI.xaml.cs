@@ -23,7 +23,7 @@ namespace AffdexMe
     /// </summary>
     public partial class MetricSelectionUI : Window
     {
-        const String SELECTMSG = "Please select 6 Emotions or Expressions to track.";
+        const String SELECTMSG = "Please select Emotions or Expressions to track.";
         const String ACTIVEMSG = "{0} Metrics chosen, please select {1} more.";
         const String DONEMSG = "{0} Metrics chosen.";
         const String DESELECTMSG = "Reached max number of metrics selected.";
@@ -82,9 +82,9 @@ namespace AffdexMe
             if (!isStackPanelSelected(border)) 
                 border.BorderBrush = Brushes.White;
 
-            int classifersCount = Classifiers.Count;
-            if (classifersCount == 6) txtBlkInfo.Text = String.Format(DONEMSG, classifersCount);
-            else txtBlkInfo.Text = String.Format(ACTIVEMSG, classifersCount, 6 - classifersCount);
+            //int classifersCount = Classifiers.Count;
+            //if (classifersCount == 6) txtBlkInfo.Text = String.Format(DONEMSG, classifersCount);
+            //else txtBlkInfo.Text = String.Format(ACTIVEMSG, classifersCount, 6 - classifersCount);
         }
 
         private void stopGif(Image image)
@@ -113,19 +113,19 @@ namespace AffdexMe
                 Classifiers.Remove(((StackPanel)sender).Name);
             }
             else {
-                int classifersCount = Classifiers.Count;
-                if ( classifersCount < 6)
-                {
+                //int classifersCount = Classifiers.Count;
+                //if ( classifersCount < 6)
+                //{
                     border.BorderBrush = Brushes.Green;
                     Classifiers.Add(((StackPanel)sender).Name);
-                    if (classifersCount + 1 == 6) txtBlkInfo.Text = String.Format(DONEMSG, classifersCount + 1);
-                    else txtBlkInfo.Text = String.Format(ACTIVEMSG, classifersCount+1, 6 - classifersCount);
-                }
-                else
-                {
-                    border.BorderBrush = Brushes.Red;
-                    txtBlkInfo.Text = DESELECTMSG;
-                }
+                //    if (classifersCount + 1 == 6) txtBlkInfo.Text = String.Format(DONEMSG, classifersCount + 1);
+                //    else txtBlkInfo.Text = String.Format(ACTIVEMSG, classifersCount+1, 6 - classifersCount);
+                //}
+                //else
+                //{
+                //    border.BorderBrush = Brushes.Red;
+                //    txtBlkInfo.Text = DESELECTMSG;
+                //}
                 
             }
 

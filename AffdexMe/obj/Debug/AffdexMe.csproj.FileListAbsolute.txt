@@ -1,0 +1,55 @@
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\AffdexMe.exe.config
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\AffdexMe.exe
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\AffdexMe.pdb
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\WpfAnimatedGif.dll
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\WpfAnimatedGif.xml
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\MainWindow.baml
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\MainWindow.g.cs
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\MetricSelectionUI.g.cs
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe_MarkupCompile.cache
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe_MarkupCompile.lref
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\MetricSelectionUI.baml
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.g.resources
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.Properties.Resources.resources
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.csproj.GenerateResource.Cache
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.exe
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.pdb
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\Affdex.dll
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe_Content.g.cs
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\EntityFramework.dll
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\EntityFramework.xml
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.csprojResolveAssemblyReference.cache
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\Microsoft.ServiceBus.dll
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\Microsoft.ServiceBus.xml
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\AffdexMe.exe.config
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.exe
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.pdb
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\AffdexMe.exe
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\AffdexMe.pdb
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\Affdex.dll
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\EntityFramework.dll
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\Microsoft.ServiceBus.dll
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\WpfAnimatedGif.dll
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\EntityFramework.xml
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\Microsoft.ServiceBus.xml
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\bin\Debug\WpfAnimatedGif.xml
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\MainWindow.baml
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\MainWindow.g.cs
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\MetricSelectionUI.g.cs
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe_Content.g.cs
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe_MarkupCompile.cache
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe_MarkupCompile.lref
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\MetricSelectionUI.baml
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.g.resources
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.Properties.Resources.resources
+C:\Users\walkerp\Documents\Visual Studio 2015\Projects\win-sdk-samples\AffdexMe\obj\Debug\AffdexMe.csproj.GenerateResource.Cache

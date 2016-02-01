@@ -1,0 +1,7 @@
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\bin\x86\Debug\AffdexMe.exe.config
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\x86\Debug\MainWindow.baml
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\x86\Debug\MainWindow.g.cs
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\x86\Debug\MetricSelectionUI.g.cs
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\x86\Debug\AffdexMe_MarkupCompile.cache
+C:\Users\walkerp\Source\Repos\win-sdk-samples\AffdexMe\obj\x86\Debug\AffdexMe_MarkupCompile.lref

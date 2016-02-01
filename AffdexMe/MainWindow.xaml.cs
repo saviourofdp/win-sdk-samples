@@ -14,6 +14,8 @@ using System.Collections.Specialized;
 
 using Microsoft.Win32;
 using System.Reflection;
+using Microsoft.ServiceBus.Messaging;
+using System.Runtime.Serialization.Json;
 
 namespace AffdexMe
 {
@@ -22,6 +24,16 @@ namespace AffdexMe
     /// </summary>
     public partial class MainWindow : Window, Affdex.ImageListener, Affdex.ProcessStatusListener
     {
+
+        Properties.Settings settings;
+        
+        EventHubClient hubClient;
+
+
+        DataContractJsonSerializerSettings jsonSettings;
+        DataContractJsonSerializer serialiser;
+
+        FaceModel faceModel = new FaceModel();
 
         #region Member Variables and Enums
 
@@ -94,20 +106,52 @@ namespace AffdexMe
 
         #region Listener Implementation
 
-	    public void onImageResults(Dictionary<int, Affdex.Face> faces, Affdex.Frame image)
-        {
+            
+        Guid guid = Guid.NewGuid();
+        
+
+        public void onImageResults(Dictionary<int, Affdex.Face> faces, Affdex.Frame image)
+        {            
+
             // For now only single face is supported
             if ((faces.Count() >= 1))
             {
+                              
                 Affdex.Face face = faces[0];
+
+                if (face.Id == 0)
+                    guid = Guid.NewGuid();
 
                 UpdateClassifierPanel(face);
                 DisplayFeaturePoints(image, face);
-                DisplayMeasurements(face);   
-            }
-	    }
+                DisplayMeasurements(face);
 
-	    public void onImageCapture(Affdex.Frame image) 
+                FaceEntity entity = new FaceEntity(guid, face, DateTimeOffset.Now);
+#if DEBUG 
+                faceModel.FaceEntities.Add(entity);
+                //foreach (Affdex.FeaturePoint point in face.FeaturePoints)
+                //{
+                //    faceModel.FeaturePointEntities.Add(new FeaturePointEntity(guid, face.Id, point));
+                //}
+               
+                faceModel.SaveChanges();
+
+
+                using(Stream stream = new MemoryStream())
+                {
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        serialiser.WriteObject(stream, entity);
+                        stream.Position = 0;
+                        System.Diagnostics.Debug.WriteLine(reader.ReadToEnd());
+                    }
+                }
+#endif
+                hubClient.Send(new EventData(entity, serialiser));
+            }
+        }
+
+        public void onImageCapture(Affdex.Frame image) 
 	    {
             UpdateClassifierPanel();
             DisplayImageToOffscreenCanvas(image);
@@ -139,7 +183,7 @@ namespace AffdexMe
 
         private String GetClassifierDataFolder()
         {
-            String affdexClassifierDir = Environment.GetEnvironmentVariable("AFFDEX_DATA_DIR");
+            String affdexClassifierDir = settings.DataPath;
             if (String.IsNullOrEmpty(affdexClassifierDir))
             {
                 ShowExceptionAndShutDown("AFFDEX_DATA_DIR environment variable (Classifier Data Directory) is not set");
@@ -156,8 +200,8 @@ namespace AffdexMe
 
         private String GetAffdexLicense()
         {
-            String licensePath = String.Empty;
-            licensePath = Environment.GetEnvironmentVariable("AFFDEX_LICENSE_DIR");
+            String licensePath = settings.LicencePath;
+            // licensePath = Environment.GetEnvironmentVariable("AFFDEX_LICENSE_DIR");
             if (String.IsNullOrEmpty(licensePath))
             {
                 ShowExceptionAndShutDown("AFFDEX_LICENSE_DIR environment variable (Affdex License Folder) is not set");
@@ -169,12 +213,24 @@ namespace AffdexMe
         public MainWindow()
         {
             InitializeComponent();
+
+           
+            settings = new Properties.Settings();
+            hubClient = EventHubClient.CreateFromConnectionString(settings.AzureEventHubEndPoint, settings.AzureEventHubName);
+
             CenterWindowOnScreen();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             InitializeCameraApp();
+
+            jsonSettings = new DataContractJsonSerializerSettings()
+            {
+                DateTimeFormat = new System.Runtime.Serialization.DateTimeFormat("yyyy-MM-dd'T'HH:mm:ss.fffZ")
+            };
+            //jsonSettings.DateTimeFormat.DateTimeStyles = DateTimeStyles.AdjustToUniversal;
+            serialiser = new DataContractJsonSerializer(typeof(FaceEntity), jsonSettings);
 
             mEnabledClassifiers = AffdexMe.Settings.Default.Classifiers;
             // Enable/Disable buttons on start
@@ -723,6 +779,7 @@ namespace AffdexMe
 
                 // Instantiate CameraDetector using default camera ID
                 mCameraDetector = new Affdex.CameraDetector();
+                
                 mCameraDetector.setClassifierPath(GetClassifierDataFolder());
 
                 // Set the Classifiers that we are interested in tracking
@@ -742,7 +799,7 @@ namespace AffdexMe
 
                 // Set the License Path
                 mCameraDetector.setLicensePath(GetAffdexLicense());
-
+                
                 mStartTime = DateTime.Now;
                 mCameraDetector.start();
 
@@ -841,5 +898,33 @@ namespace AffdexMe
             }
         }
 
+        private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == System.Windows.Input.Key.Escape)
+            {
+                if(WindowState == WindowState.Maximized
+                    && WindowStyle == WindowStyle.None)
+                {
+                    WindowStyle = WindowStyle.SingleBorderWindow;
+                    WindowState = WindowState.Normal;
+                    controlGrid.Visibility = Visibility.Visible;
+                }
+            }
+            if(e.Key == System.Windows.Input.Key.F11)
+            {
+                if(this.WindowStyle != WindowStyle.None)
+                {
+                    WindowStyle = WindowStyle.None;
+                    WindowState = WindowState.Maximized;
+                    controlGrid.Visibility = Visibility.Collapsed;
+                } else
+                {
+                    WindowStyle = WindowStyle.SingleBorderWindow;
+                    WindowState = WindowState.Normal;
+                    controlGrid.Visibility = Visibility.Visible;
+                }
+
+            }
+        }
     }
 }

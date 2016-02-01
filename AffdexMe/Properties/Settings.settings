@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AffdexMe" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AffdexMe.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="Classifiers" Type="System.Collections.Specialized.StringCollection" Scope="User">
@@ -11,13 +11,27 @@
   &lt;string&gt;Disgust&lt;/string&gt;
   &lt;string&gt;Surprise&lt;/string&gt;
   &lt;string&gt;Fear&lt;/string&gt;
+  &lt;string&gt;Attention&lt;/string&gt;
+  &lt;string&gt;Engagement&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
     <Setting Name="ShowPoints" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="ShowMeasurements" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LicencePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Program Files\Affectiva\sdk_peter.walker@kantar.com.license</Value>
+    </Setting>
+    <Setting Name="DataPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Program Files\Affectiva\Affdex SDK\data</Value>
+    </Setting>
+    <Setting Name="AzureEventHubName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mwcfacialmoodencoding</Value>
+    </Setting>
+    <Setting Name="AzureEventHubEndPoint" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Endpoint=sb://mwcfacialmoodencoding-ns.servicebus.windows.net/;SharedAccessKeyName=SendRule;SharedAccessKey=MGcJt1sZt/OErdQdQeVaW6syvvjEnoMf2oW4Ky3vuDs=</Value>
     </Setting>
   </Settings>
 </SettingsFile>
